@@ -37,24 +37,23 @@ class _ExampleHomePageState extends State<ExampleHomePage>
 
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
       body: Center(
         child: Container(
-          padding: const EdgeInsets.symmetric(horizontal:30),
+          padding: EdgeInsets.symmetric(
+              horizontal: MediaQuery.of(context).size.width * 0.07),
           height: MediaQuery.of(context).size.height * 0.55,
           child: TinderSwapCard(
             orientation: AmassOrientation.BOTTOM,
             totalNum: welcomeImages.length,
             stackNum: 3,
             swipeEdge: 4,
-            maxWidth: MediaQuery.of(context).size.width * 0.5,
-            maxHeight: MediaQuery.of(context).size.width * 0.5,
-            minWidth: MediaQuery.of(context).size.width * 0.4,
-            minHeight: MediaQuery.of(context).size.width * 0.4,
+            maxWidth: MediaQuery.of(context).size.width * 0.9,
+            maxHeight: MediaQuery.of(context).size.width * 0.9,
+            minWidth: MediaQuery.of(context).size.width * 0.8,
+            minHeight: MediaQuery.of(context).size.width * 0.8,
             cardBuilder: (context, index) {
-              return Card(
-                  child: CardWidget(image: welcomeImages[index]));
+              return Card(child: CardWidget(image: welcomeImages[index]));
             },
             cardController: CardController(),
           ),
