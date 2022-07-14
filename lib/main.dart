@@ -1,5 +1,6 @@
 // ignore_for_file: unnecessary_string_escapes
 
+import 'package:aka_tinder/widgets/card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_tindercard/flutter_tindercard.dart';
 
@@ -36,27 +37,26 @@ class _ExampleHomePageState extends State<ExampleHomePage>
 
   @override
   Widget build(BuildContext context) {
-    CardController controller;
 
     return Scaffold(
       body: Center(
         child: Container(
-          height: MediaQuery.of(context).size.height * 0.6,
+          padding: const EdgeInsets.symmetric(horizontal:30),
+          height: MediaQuery.of(context).size.height * 0.55,
           child: TinderSwapCard(
             orientation: AmassOrientation.BOTTOM,
             totalNum: welcomeImages.length,
             stackNum: 3,
-            swipeEdge: 4.0,
-            maxWidth: MediaQuery.of(context).size.width * 0.9,
-            maxHeight: MediaQuery.of(context).size.width * 0.9,
-            minWidth: MediaQuery.of(context).size.width * 0.8,
-            minHeight: MediaQuery.of(context).size.width * 0.8,
+            swipeEdge: 4,
+            maxWidth: MediaQuery.of(context).size.width * 0.5,
+            maxHeight: MediaQuery.of(context).size.width * 0.5,
+            minWidth: MediaQuery.of(context).size.width * 0.4,
+            minHeight: MediaQuery.of(context).size.width * 0.4,
             cardBuilder: (context, index) {
               return Card(
-                child: Image.asset('${welcomeImages[index]}'),
-              );
+                  child: CardWidget(image: welcomeImages[index]));
             },
-            cardController: controller = CardController(),
+            cardController: CardController(),
           ),
         ),
       ),
