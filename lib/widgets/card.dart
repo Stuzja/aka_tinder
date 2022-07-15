@@ -1,4 +1,4 @@
-import 'package:flutter/cupertino.dart';
+
 import 'package:flutter/material.dart';
 
 class CardWidget extends StatelessWidget {
@@ -19,8 +19,11 @@ class CardWidget extends StatelessWidget {
           child:
           Container(
             alignment: Alignment.bottomCenter,
+                decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(15),
+              color: const Color.fromRGBO(255, 244, 244, 1)),
             child: 
-            Container(
+            SizedBox(
               height:MediaQuery.of(context).size.height * 0.55 * 0.17,
               child:
             Row(children: [
