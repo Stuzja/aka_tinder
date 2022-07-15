@@ -42,16 +42,16 @@ class _ExampleHomePageState extends State<ExampleHomePage>
         child: Container(
           padding: EdgeInsets.symmetric(
               horizontal: MediaQuery.of(context).size.width * 0.07),
-          height: MediaQuery.of(context).size.height * 0.55,
+          height: MediaQuery.of(context).size.height * 0.56,
           child: TinderSwapCard(
             orientation: AmassOrientation.BOTTOM,
             totalNum: welcomeImages.length,
             stackNum: 3,
-            swipeEdge: 4,
+            swipeEdge: 3,
             maxWidth: MediaQuery.of(context).size.width * 0.9,
-            maxHeight: MediaQuery.of(context).size.width * 0.9,
-            minWidth: MediaQuery.of(context).size.width * 0.8,
-            minHeight: MediaQuery.of(context).size.width * 0.8,
+            maxHeight: MediaQuery.of(context).size.height * 0.9,
+            minWidth: MediaQuery.of(context).size.width * 0.4,
+            minHeight: MediaQuery.of(context).size.height * 0.4,
             cardBuilder: (context, index) {
               return Card(child: CardWidget(image: welcomeImages[index]));
             },

@@ -10,6 +10,7 @@ class CardWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(children: [
       Container(
+          height: MediaQuery.of(context).size.height * 0.55,
           padding: EdgeInsets.symmetric(
               horizontal: MediaQuery.of(context).size.width * 0.07),
           decoration: BoxDecoration(
