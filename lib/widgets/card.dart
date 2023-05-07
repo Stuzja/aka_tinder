@@ -5,7 +5,7 @@ class CardWidget extends StatelessWidget {
   final String image;
 
   const CardWidget({Key? key, required this.image}) : super(key: key);
-
+////////////
   @override
   Widget build(BuildContext context) {
     return Stack(children: [
